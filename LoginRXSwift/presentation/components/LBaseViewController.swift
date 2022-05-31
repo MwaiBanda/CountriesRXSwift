@@ -1,19 +1,19 @@
 //
-//  ViewController.swift
+//  LBaseViewController.swift
 //  LoginRXSwift
 //
 //  Created by Mwai Banda on 5/31/22.
 //
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController {
 
+class LBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .systemGray5
+        
     }
 
-
 }
-

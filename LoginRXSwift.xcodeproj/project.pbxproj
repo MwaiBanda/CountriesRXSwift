@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		811743882846870E00542CAD /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 811743872846870E00542CAD /* Swinject */; };
+		8117438B2846872900542CAD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8117438A2846872900542CAD /* RxCocoa */; };
+		8117438D2846872900542CAD /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 8117438C2846872900542CAD /* RxRelay */; };
+		8117438F2846872900542CAD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8117438E2846872900542CAD /* RxSwift */; };
 		81C73175284637E1001CFC35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73174284637E1001CFC35 /* AppDelegate.swift */; };
 		81C73177284637E1001CFC35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73176284637E1001CFC35 /* SceneDelegate.swift */; };
-		81C73179284637E1001CFC35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73178284637E1001CFC35 /* ViewController.swift */; };
+		81C73179284637E1001CFC35 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73178284637E1001CFC35 /* LoginViewController.swift */; };
 		81C7317C284637E1001CFC35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C7317A284637E1001CFC35 /* Main.storyboard */; };
 		81C7317E284637EB001CFC35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C7317D284637EB001CFC35 /* Assets.xcassets */; };
 		81C73181284637EB001CFC35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C7317F284637EB001CFC35 /* LaunchScreen.storyboard */; };
 		81C7318C284637EB001CFC35 /* LoginRXSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7318B284637EB001CFC35 /* LoginRXSwiftTests.swift */; };
 		81C73196284637EB001CFC35 /* LoginRXSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73195284637EB001CFC35 /* LoginRXSwiftUITests.swift */; };
 		81C73198284637EB001CFC35 /* LoginRXSwiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73197284637EB001CFC35 /* LoginRXSwiftUITestsLaunchTests.swift */; };
+		81C731A92846722F001CFC35 /* LButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C731A82846722F001CFC35 /* LButton.swift */; };
+		81C731AB28467254001CFC35 /* LTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C731AA28467254001CFC35 /* LTextField.swift */; };
+		81C731AD28467632001CFC35 /* LBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C731AC28467632001CFC35 /* LBaseViewController.swift */; };
+		81C731AF2846768E001CFC35 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C731AE2846768E001CFC35 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +47,7 @@
 		81C73171284637E1001CFC35 /* LoginRXSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginRXSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C73174284637E1001CFC35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81C73176284637E1001CFC35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		81C73178284637E1001CFC35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		81C73178284637E1001CFC35 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		81C7317B284637E1001CFC35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81C7317D284637EB001CFC35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81C73180284637EB001CFC35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,10 @@
 		81C73191284637EB001CFC35 /* LoginRXSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginRXSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C73195284637EB001CFC35 /* LoginRXSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRXSwiftUITests.swift; sourceTree = "<group>"; };
 		81C73197284637EB001CFC35 /* LoginRXSwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRXSwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		81C731A82846722F001CFC35 /* LButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LButton.swift; sourceTree = "<group>"; };
+		81C731AA28467254001CFC35 /* LTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTextField.swift; sourceTree = "<group>"; };
+		81C731AC28467632001CFC35 /* LBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBaseViewController.swift; sourceTree = "<group>"; };
+		81C731AE2846768E001CFC35 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8117438D2846872900542CAD /* RxRelay in Frameworks */,
+				8117438B2846872900542CAD /* RxCocoa in Frameworks */,
+				8117438F2846872900542CAD /* RxSwift in Frameworks */,
+				811743882846870E00542CAD /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +115,8 @@
 		81C73173284637E1001CFC35 /* LoginRXSwift */ = {
 			isa = PBXGroup;
 			children = (
-				81C73174284637E1001CFC35 /* AppDelegate.swift */,
-				81C73176284637E1001CFC35 /* SceneDelegate.swift */,
-				81C73178284637E1001CFC35 /* ViewController.swift */,
-				81C7317A284637E1001CFC35 /* Main.storyboard */,
+				81C731A528467142001CFC35 /* presentation */,
+				81C731A42846712A001CFC35 /* main */,
 				81C7317D284637EB001CFC35 /* Assets.xcassets */,
 				81C7317F284637EB001CFC35 /* LaunchScreen.storyboard */,
 				81C73182284637EB001CFC35 /* Info.plist */,
@@ -127,6 +141,44 @@
 			path = LoginRXSwiftUITests;
 			sourceTree = "<group>";
 		};
+		81C731A42846712A001CFC35 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				81C73176284637E1001CFC35 /* SceneDelegate.swift */,
+				81C73174284637E1001CFC35 /* AppDelegate.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		81C731A528467142001CFC35 /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				81C7317A284637E1001CFC35 /* Main.storyboard */,
+				81C731A728467194001CFC35 /* login */,
+				81C731A628467180001CFC35 /* components */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		81C731A628467180001CFC35 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				81C731A82846722F001CFC35 /* LButton.swift */,
+				81C731AA28467254001CFC35 /* LTextField.swift */,
+				81C731AC28467632001CFC35 /* LBaseViewController.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		81C731A728467194001CFC35 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				81C73178284637E1001CFC35 /* LoginViewController.swift */,
+				81C731AE2846768E001CFC35 /* LoginViewModel.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +195,12 @@
 			dependencies = (
 			);
 			name = LoginRXSwift;
+			packageProductDependencies = (
+				811743872846870E00542CAD /* Swinject */,
+				8117438A2846872900542CAD /* RxCocoa */,
+				8117438C2846872900542CAD /* RxRelay */,
+				8117438E2846872900542CAD /* RxSwift */,
+			);
 			productName = LoginRXSwift;
 			productReference = 81C73171284637E1001CFC35 /* LoginRXSwift.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +273,10 @@
 				Base,
 			);
 			mainGroup = 81C73168284637E0001CFC35;
+			packageReferences = (
+				811743862846870E00542CAD /* XCRemoteSwiftPackageReference "Swinject" */,
+				811743892846872900542CAD /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 81C73172284637E1001CFC35 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,9 +320,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81C73179284637E1001CFC35 /* ViewController.swift in Sources */,
+				81C731AB28467254001CFC35 /* LTextField.swift in Sources */,
+				81C731A92846722F001CFC35 /* LButton.swift in Sources */,
+				81C731AD28467632001CFC35 /* LBaseViewController.swift in Sources */,
+				81C73179284637E1001CFC35 /* LoginViewController.swift in Sources */,
 				81C73175284637E1001CFC35 /* AppDelegate.swift in Sources */,
 				81C73177284637E1001CFC35 /* SceneDelegate.swift in Sources */,
+				81C731AF2846768E001CFC35 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +668,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		811743862846870E00542CAD /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		811743892846872900542CAD /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		811743872846870E00542CAD /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 811743862846870E00542CAD /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		8117438A2846872900542CAD /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 811743892846872900542CAD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		8117438C2846872900542CAD /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 811743892846872900542CAD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		8117438E2846872900542CAD /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 811743892846872900542CAD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 81C73169284637E0001CFC35 /* Project object */;
 }
