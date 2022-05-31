@@ -11,6 +11,8 @@
 		8117438B2846872900542CAD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8117438A2846872900542CAD /* RxCocoa */; };
 		8117438D2846872900542CAD /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 8117438C2846872900542CAD /* RxRelay */; };
 		8117438F2846872900542CAD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8117438E2846872900542CAD /* RxSwift */; };
+		8117439228469DF200542CAD /* DependencyRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117439128469DF200542CAD /* DependencyRegistry.swift */; };
+		811743962846A3CE00542CAD /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811743952846A3CE00542CAD /* Contants.swift */; };
 		81C73175284637E1001CFC35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73174284637E1001CFC35 /* AppDelegate.swift */; };
 		81C73177284637E1001CFC35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73176284637E1001CFC35 /* SceneDelegate.swift */; };
 		81C73179284637E1001CFC35 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73178284637E1001CFC35 /* LoginViewController.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8117439128469DF200542CAD /* DependencyRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyRegistry.swift; sourceTree = "<group>"; };
+		811743952846A3CE00542CAD /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		81C73171284637E1001CFC35 /* LoginRXSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginRXSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C73174284637E1001CFC35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81C73176284637E1001CFC35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8117439028469CC900542CAD /* di */ = {
+			isa = PBXGroup;
+			children = (
+				8117439128469DF200542CAD /* DependencyRegistry.swift */,
+			);
+			path = di;
+			sourceTree = "<group>";
+		};
+		811743932846A3A600542CAD /* core */ = {
+			isa = PBXGroup;
+			children = (
+				811743942846A3AF00542CAD /* utils */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		811743942846A3AF00542CAD /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				811743952846A3CE00542CAD /* Contants.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		81C73168284637E0001CFC35 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +143,8 @@
 		81C73173284637E1001CFC35 /* LoginRXSwift */ = {
 			isa = PBXGroup;
 			children = (
+				811743932846A3A600542CAD /* core */,
+				8117439028469CC900542CAD /* di */,
 				81C731A528467142001CFC35 /* presentation */,
 				81C731A42846712A001CFC35 /* main */,
 				81C7317D284637EB001CFC35 /* Assets.xcassets */,
@@ -323,7 +353,9 @@
 				81C731AB28467254001CFC35 /* LTextField.swift in Sources */,
 				81C731A92846722F001CFC35 /* LButton.swift in Sources */,
 				81C731AD28467632001CFC35 /* LBaseViewController.swift in Sources */,
+				8117439228469DF200542CAD /* DependencyRegistry.swift in Sources */,
 				81C73179284637E1001CFC35 /* LoginViewController.swift in Sources */,
+				811743962846A3CE00542CAD /* Contants.swift in Sources */,
 				81C73175284637E1001CFC35 /* AppDelegate.swift in Sources */,
 				81C73177284637E1001CFC35 /* SceneDelegate.swift in Sources */,
 				81C731AF2846768E001CFC35 /* LoginViewModel.swift in Sources */,

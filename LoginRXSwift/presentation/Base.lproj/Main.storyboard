@@ -32,6 +32,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Login">
                                     <color key="baseForegroundColor" systemColor="systemGray6Color"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onLoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oi5-sq-COx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -48,6 +51,11 @@
                             <constraint firstItem="4pA-JS-pfU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="zW3-Vf-wmn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnLogin" destination="FC3-Ix-LYX" id="U8c-eV-IH6"/>
+                        <outlet property="txtPassword" destination="kc0-bm-Pmw" id="mxf-os-UG0"/>
+                        <outlet property="txtUsername" destination="4pA-JS-pfU" id="I8J-S9-Vd0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
