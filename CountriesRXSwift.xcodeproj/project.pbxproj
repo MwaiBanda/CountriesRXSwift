@@ -56,7 +56,7 @@
 		818DC7302846D44A00AA7154 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		818DC7322846DADA00AA7154 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		818DC7342846E3AE00AA7154 /* CountriesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesDetailViewController.swift; sourceTree = "<group>"; };
-		81C73171284637E1001CFC35 /* LoginRXSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginRXSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81C73171284637E1001CFC35 /* CountriesRXSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountriesRXSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C73174284637E1001CFC35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81C73176284637E1001CFC35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		81C73178284637E1001CFC35 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -64,9 +64,9 @@
 		81C7317D284637EB001CFC35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81C73180284637EB001CFC35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81C73182284637EB001CFC35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81C73187284637EB001CFC35 /* LoginRXSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginRXSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81C73187284637EB001CFC35 /* CountriesRXSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountriesRXSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C7318B284637EB001CFC35 /* LoginRXSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRXSwiftTests.swift; sourceTree = "<group>"; };
-		81C73191284637EB001CFC35 /* LoginRXSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginRXSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81C73191284637EB001CFC35 /* CountriesRXSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountriesRXSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C73195284637EB001CFC35 /* LoginRXSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRXSwiftUITests.swift; sourceTree = "<group>"; };
 		81C73197284637EB001CFC35 /* LoginRXSwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRXSwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		81C731A82846722F001CFC35 /* LButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LButton.swift; sourceTree = "<group>"; };
@@ -115,6 +115,7 @@
 		811743932846A3A600542CAD /* core */ = {
 			isa = PBXGroup;
 			children = (
+				818DC7372847BD3900AA7154 /* exts */,
 				811743942846A3AF00542CAD /* utils */,
 			);
 			path = core;
@@ -153,12 +154,26 @@
 			path = settings;
 			sourceTree = "<group>";
 		};
+		818DC7362847BD2000AA7154 /* data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		818DC7372847BD3900AA7154 /* exts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = exts;
+			sourceTree = "<group>";
+		};
 		81C73168284637E0001CFC35 = {
 			isa = PBXGroup;
 			children = (
-				81C73173284637E1001CFC35 /* LoginRXSwift */,
-				81C7318A284637EB001CFC35 /* LoginRXSwiftTests */,
-				81C73194284637EB001CFC35 /* LoginRXSwiftUITests */,
+				81C73173284637E1001CFC35 /* CountriesRXSwift */,
+				81C7318A284637EB001CFC35 /* CountriesRXSwiftTests */,
+				81C73194284637EB001CFC35 /* CountriesRXSwiftUITests */,
 				81C73172284637E1001CFC35 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -166,16 +181,17 @@
 		81C73172284637E1001CFC35 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81C73171284637E1001CFC35 /* LoginRXSwift.app */,
-				81C73187284637EB001CFC35 /* LoginRXSwiftTests.xctest */,
-				81C73191284637EB001CFC35 /* LoginRXSwiftUITests.xctest */,
+				81C73171284637E1001CFC35 /* CountriesRXSwift.app */,
+				81C73187284637EB001CFC35 /* CountriesRXSwiftTests.xctest */,
+				81C73191284637EB001CFC35 /* CountriesRXSwiftUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		81C73173284637E1001CFC35 /* LoginRXSwift */ = {
+		81C73173284637E1001CFC35 /* CountriesRXSwift */ = {
 			isa = PBXGroup;
 			children = (
+				818DC7362847BD2000AA7154 /* data */,
 				811743932846A3A600542CAD /* core */,
 				8117439028469CC900542CAD /* di */,
 				81C731A528467142001CFC35 /* presentation */,
@@ -184,24 +200,24 @@
 				81C7317F284637EB001CFC35 /* LaunchScreen.storyboard */,
 				81C73182284637EB001CFC35 /* Info.plist */,
 			);
-			path = LoginRXSwift;
+			path = CountriesRXSwift;
 			sourceTree = "<group>";
 		};
-		81C7318A284637EB001CFC35 /* LoginRXSwiftTests */ = {
+		81C7318A284637EB001CFC35 /* CountriesRXSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
 				81C7318B284637EB001CFC35 /* LoginRXSwiftTests.swift */,
 			);
-			path = LoginRXSwiftTests;
+			path = CountriesRXSwiftTests;
 			sourceTree = "<group>";
 		};
-		81C73194284637EB001CFC35 /* LoginRXSwiftUITests */ = {
+		81C73194284637EB001CFC35 /* CountriesRXSwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
 				81C73195284637EB001CFC35 /* LoginRXSwiftUITests.swift */,
 				81C73197284637EB001CFC35 /* LoginRXSwiftUITestsLaunchTests.swift */,
 			);
-			path = LoginRXSwiftUITests;
+			path = CountriesRXSwiftUITests;
 			sourceTree = "<group>";
 		};
 		81C731A42846712A001CFC35 /* main */ = {
@@ -248,9 +264,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		81C73170284637E0001CFC35 /* LoginRXSwift */ = {
+		81C73170284637E0001CFC35 /* CountriesRXSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81C7319B284637EB001CFC35 /* Build configuration list for PBXNativeTarget "LoginRXSwift" */;
+			buildConfigurationList = 81C7319B284637EB001CFC35 /* Build configuration list for PBXNativeTarget "CountriesRXSwift" */;
 			buildPhases = (
 				81C7316D284637E0001CFC35 /* Sources */,
 				81C7316E284637E0001CFC35 /* Frameworks */,
@@ -260,7 +276,7 @@
 			);
 			dependencies = (
 			);
-			name = LoginRXSwift;
+			name = CountriesRXSwift;
 			packageProductDependencies = (
 				811743872846870E00542CAD /* Swinject */,
 				8117438A2846872900542CAD /* RxCocoa */,
@@ -268,12 +284,12 @@
 				8117438E2846872900542CAD /* RxSwift */,
 			);
 			productName = LoginRXSwift;
-			productReference = 81C73171284637E1001CFC35 /* LoginRXSwift.app */;
+			productReference = 81C73171284637E1001CFC35 /* CountriesRXSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		81C73186284637EB001CFC35 /* LoginRXSwiftTests */ = {
+		81C73186284637EB001CFC35 /* CountriesRXSwiftTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81C7319E284637EB001CFC35 /* Build configuration list for PBXNativeTarget "LoginRXSwiftTests" */;
+			buildConfigurationList = 81C7319E284637EB001CFC35 /* Build configuration list for PBXNativeTarget "CountriesRXSwiftTests" */;
 			buildPhases = (
 				81C73183284637EB001CFC35 /* Sources */,
 				81C73184284637EB001CFC35 /* Frameworks */,
@@ -284,14 +300,14 @@
 			dependencies = (
 				81C73189284637EB001CFC35 /* PBXTargetDependency */,
 			);
-			name = LoginRXSwiftTests;
+			name = CountriesRXSwiftTests;
 			productName = LoginRXSwiftTests;
-			productReference = 81C73187284637EB001CFC35 /* LoginRXSwiftTests.xctest */;
+			productReference = 81C73187284637EB001CFC35 /* CountriesRXSwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		81C73190284637EB001CFC35 /* LoginRXSwiftUITests */ = {
+		81C73190284637EB001CFC35 /* CountriesRXSwiftUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81C731A1284637EB001CFC35 /* Build configuration list for PBXNativeTarget "LoginRXSwiftUITests" */;
+			buildConfigurationList = 81C731A1284637EB001CFC35 /* Build configuration list for PBXNativeTarget "CountriesRXSwiftUITests" */;
 			buildPhases = (
 				81C7318D284637EB001CFC35 /* Sources */,
 				81C7318E284637EB001CFC35 /* Frameworks */,
@@ -302,9 +318,9 @@
 			dependencies = (
 				81C73193284637EB001CFC35 /* PBXTargetDependency */,
 			);
-			name = LoginRXSwiftUITests;
+			name = CountriesRXSwiftUITests;
 			productName = LoginRXSwiftUITests;
-			productReference = 81C73191284637EB001CFC35 /* LoginRXSwiftUITests.xctest */;
+			productReference = 81C73191284637EB001CFC35 /* CountriesRXSwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -330,7 +346,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 81C7316C284637E0001CFC35 /* Build configuration list for PBXProject "LoginRXSwift" */;
+			buildConfigurationList = 81C7316C284637E0001CFC35 /* Build configuration list for PBXProject "CountriesRXSwift" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -347,9 +363,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				81C73170284637E0001CFC35 /* LoginRXSwift */,
-				81C73186284637EB001CFC35 /* LoginRXSwiftTests */,
-				81C73190284637EB001CFC35 /* LoginRXSwiftUITests */,
+				81C73170284637E0001CFC35 /* CountriesRXSwift */,
+				81C73186284637EB001CFC35 /* CountriesRXSwiftTests */,
+				81C73190284637EB001CFC35 /* CountriesRXSwiftUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -424,12 +440,12 @@
 /* Begin PBXTargetDependency section */
 		81C73189284637EB001CFC35 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 81C73170284637E0001CFC35 /* LoginRXSwift */;
+			target = 81C73170284637E0001CFC35 /* CountriesRXSwift */;
 			targetProxy = 81C73188284637EB001CFC35 /* PBXContainerItemProxy */;
 		};
 		81C73193284637EB001CFC35 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 81C73170284637E0001CFC35 /* LoginRXSwift */;
+			target = 81C73170284637E0001CFC35 /* CountriesRXSwift */;
 			targetProxy = 81C73192284637EB001CFC35 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -640,7 +656,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoginRXSwift.app/LoginRXSwift";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountriesRXSwift.app/CountriesRXSwift";
 			};
 			name = Debug;
 		};
@@ -660,7 +676,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoginRXSwift.app/LoginRXSwift";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountriesRXSwift.app/CountriesRXSwift";
 			};
 			name = Release;
 		};
@@ -703,7 +719,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		81C7316C284637E0001CFC35 /* Build configuration list for PBXProject "LoginRXSwift" */ = {
+		81C7316C284637E0001CFC35 /* Build configuration list for PBXProject "CountriesRXSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81C73199284637EB001CFC35 /* Debug */,
@@ -712,7 +728,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81C7319B284637EB001CFC35 /* Build configuration list for PBXNativeTarget "LoginRXSwift" */ = {
+		81C7319B284637EB001CFC35 /* Build configuration list for PBXNativeTarget "CountriesRXSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81C7319C284637EB001CFC35 /* Debug */,
@@ -721,7 +737,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81C7319E284637EB001CFC35 /* Build configuration list for PBXNativeTarget "LoginRXSwiftTests" */ = {
+		81C7319E284637EB001CFC35 /* Build configuration list for PBXNativeTarget "CountriesRXSwiftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81C7319F284637EB001CFC35 /* Debug */,
@@ -730,7 +746,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81C731A1284637EB001CFC35 /* Build configuration list for PBXNativeTarget "LoginRXSwiftUITests" */ = {
+		81C731A1284637EB001CFC35 /* Build configuration list for PBXNativeTarget "CountriesRXSwiftUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81C731A2284637EB001CFC35 /* Debug */,
