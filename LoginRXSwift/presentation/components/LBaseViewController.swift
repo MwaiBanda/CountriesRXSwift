@@ -15,5 +15,5 @@ class LBaseViewController: UIViewController {
         view.backgroundColor = .systemGray5
         
     }
-
+  
 }

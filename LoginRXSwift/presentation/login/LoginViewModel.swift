@@ -21,7 +21,7 @@ final class LoginViewModel: LoginViewModelProvision {
     
     func inputIsValid() -> Observable<Bool> {
         return Observable.combineLatest(username.asObserver(), password.asObserver()).startWith(("", "")).map { username, password in
-            return !username.isEmpty && password.count > 3
+            return !username.isEmpty && password.count > 3 
          }.startWith(false)
     }
 }

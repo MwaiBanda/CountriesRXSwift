@@ -27,7 +27,6 @@ final class LoginViewController: LBaseViewController {
         
         txtUsername.becomeFirstResponder()
        
-
         txtUsername.rx.text
             .map { $0 ?? ""}
             .bind(to: loginViewModel.username)
@@ -43,7 +42,7 @@ final class LoginViewController: LBaseViewController {
             .disposed(by: disposeBag)
         
         loginViewModel.inputIsValid()
-            .map { $0 ? 1 : 0.5 }
+            .map { $0 ? 1 : 0.8 }
             .bind(to: btnLogin.rx.alpha)
             .disposed(by: disposeBag)
         
