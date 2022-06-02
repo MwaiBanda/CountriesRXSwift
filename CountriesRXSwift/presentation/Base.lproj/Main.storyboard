@@ -34,7 +34,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onLoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oi5-sq-COx"/>
-                                    <segue destination="SNb-z7-JD0" kind="show" id="lYC-Uq-CyV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -128,7 +127,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="LMd-jA-SLZ">
             <objects>
-                <tabBarController id="SNb-z7-JD0" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="SNb-z7-JD0" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Uz9-JJ-B5l"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ywn-NM-ggl" customClass="TabBar" customModule="CountriesRXSwift" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

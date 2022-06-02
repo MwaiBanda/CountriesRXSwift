@@ -49,7 +49,10 @@ final class LoginViewController: LBaseViewController {
     }
     
     @IBAction func onLoginTapped(_ sender: Any) {
-        print("Tapped")
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        if let destination  = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController {
+            self.navigationController?.pushViewController(destination, animated: true)
+        }
     }
     
 }

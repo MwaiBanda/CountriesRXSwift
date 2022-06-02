@@ -28,8 +28,10 @@ class CountriesListViewController: LBaseViewController {
         self.disposeBag = Assembler.sharedInstance.resolver.resolve(DisposeBag.self, name: Constants.DisposeBag)
         view.addSubview(tableView)
         tableView.frame = view.bounds
+        tableView.backgroundColor = .systemGray5
         
         countryViewModel.countries.bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: UITableViewCell.self)){ row, country, cell in
+            cell.backgroundColor = .systemGray5
             cell.textLabel?.text = "\(country.unicodeFlag) \(country.name)"
             
         }.disposed(by: disposeBag)
@@ -49,7 +51,9 @@ class CountriesListViewController: LBaseViewController {
         super.viewWillAppear(animated)
         self.tabBarController?.navigationItem.title = "Countries"
         self.tabBarController?.navigationItem.hidesBackButton = true
-        self.tabBarController?.navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.barTintColor = .systemGray5
+
         countryViewModel.fetchCountries()
         
     }

@@ -10,7 +10,7 @@ import Swinject
 import RxSwift
 import RxCocoa
 
-class CountriesDetailViewController: UIViewController {
+class CountriesDetailViewController: LBaseViewController {
     var country: Country?
     @IBOutlet weak var countryname: UILabel!
     

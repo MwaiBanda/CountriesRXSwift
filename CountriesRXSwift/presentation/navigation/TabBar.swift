@@ -11,9 +11,9 @@ class TabBar: UITabBar {
   
     override func draw(_ rect: CGRect) {
        super.draw(rect)
-        barTintColor = .white
+        barTintColor = .systemGray5
         tintColor = .black
-        backgroundColor = .white
+        backgroundColor = .systemGray5
     }
 
 }
