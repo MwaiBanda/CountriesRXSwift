@@ -11,22 +11,22 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="LoginRXSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="CountriesRXSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4pA-JS-pfU" customClass="LTextField" customModule="LoginRXSwift" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4pA-JS-pfU" customClass="LTextField" customModule="CountriesRXSwift" customModuleProvider="target">
                                 <rect key="frame" x="30" y="238" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kc0-bm-Pmw" customClass="LTextField" customModule="LoginRXSwift" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kc0-bm-Pmw" customClass="LTextField" customModule="CountriesRXSwift" customModuleProvider="target">
                                 <rect key="frame" x="30" y="302" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FC3-Ix-LYX" customClass="LButton" customModule="LoginRXSwift" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FC3-Ix-LYX" customClass="LButton" customModule="CountriesRXSwift" customModuleProvider="target">
                                 <rect key="frame" x="30" y="366" width="354" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login">
@@ -66,7 +66,7 @@
         <!--Settings-->
         <scene sceneID="6wk-m3-Hmq">
             <objects>
-                <viewController id="Zsd-5z-JYn" customClass="SettingsViewController" customModule="LoginRXSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zsd-5z-JYn" customClass="SettingsViewController" customModule="CountriesRXSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3wQ-CZ-Jet">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +82,7 @@
         <!--Countries-->
         <scene sceneID="orQ-SY-YpA">
             <objects>
-                <viewController id="tK3-Sl-1qO" customClass="CountriesListViewController" customModule="LoginRXSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tK3-Sl-1qO" customClass="CountriesListViewController" customModule="CountriesRXSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1LR-j5-jj8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,24 +98,39 @@
         <!--Countries Detail View Controller-->
         <scene sceneID="XcF-sK-LI6">
             <objects>
-                <viewController id="kJ6-Px-PjF" customClass="CountriesDetailViewController" customModule="LoginRXSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CountriesDetailViewController" id="kJ6-Px-PjF" customClass="CountriesDetailViewController" customModule="CountriesRXSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zKt-XU-Z9D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mP1-zO-SoZ">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hpA-ny-g8F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mP1-zO-SoZ" firstAttribute="centerX" secondItem="zKt-XU-Z9D" secondAttribute="centerX" id="TPw-qN-Jvy"/>
+                            <constraint firstItem="mP1-zO-SoZ" firstAttribute="centerY" secondItem="zKt-XU-Z9D" secondAttribute="centerY" id="bTD-ni-Gvh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="countryname" destination="mP1-zO-SoZ" id="gBr-T3-Lx2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAG-BO-IoW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3613" y="-627"/>
+            <point key="canvasLocation" x="3611.594202898551" y="-627.45535714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="LMd-jA-SLZ">
             <objects>
                 <tabBarController id="SNb-z7-JD0" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Uz9-JJ-B5l"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ywn-NM-ggl" customClass="TabBar" customModule="LoginRXSwift" customModuleProvider="target">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ywn-NM-ggl" customClass="TabBar" customModule="CountriesRXSwift" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

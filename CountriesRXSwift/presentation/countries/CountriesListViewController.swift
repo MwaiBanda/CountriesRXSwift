@@ -8,9 +8,12 @@
 import UIKit
 import Swinject
 import RxSwift
+import SDWebImage
+
+
+
 
 class CountriesListViewController: LBaseViewController {
-    
     private var countryViewModel: CountryViewModelProvision!
     private var disposeBag: DisposeBag!
     private let tableView: UITableView = {
@@ -27,7 +30,17 @@ class CountriesListViewController: LBaseViewController {
         tableView.frame = view.bounds
         
         countryViewModel.countries.bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: UITableViewCell.self)){ row, country, cell in
-            cell.textLabel?.text = country.name
+            cell.textLabel?.text = "\(country.unicodeFlag) \(country.name)"
+            
+        }.disposed(by: disposeBag)
+        
+        tableView.rx.modelSelected(Country.self).bind { country in
+            self.countryViewModel.setSelectedCountry(country: country)
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            if let destination  = storyboard.instantiateViewController(withIdentifier: "CountriesDetailViewController") as? CountriesDetailViewController {
+                destination.country = country
+                self.navigationController?.pushViewController(destination, animated: true)
+            }
         }.disposed(by: disposeBag)
     }
    
@@ -38,6 +51,7 @@ class CountriesListViewController: LBaseViewController {
         self.tabBarController?.navigationItem.hidesBackButton = true
         self.tabBarController?.navigationItem.largeTitleDisplayMode = .always
         countryViewModel.fetchCountries()
+        
     }
 
 }

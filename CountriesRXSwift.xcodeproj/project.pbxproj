@@ -21,6 +21,7 @@
 		818DC73C2848587B00AA7154 /* CountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DC73B2848587B00AA7154 /* CountryService.swift */; };
 		818DC73F2848590900AA7154 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DC73E2848590900AA7154 /* Country.swift */; };
 		818DC74128485AC400AA7154 /* CountryServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DC74028485AC400AA7154 /* CountryServiceImplementation.swift */; };
+		81B707F228487F5800136827 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 81B707F128487F5800136827 /* SDWebImage */; };
 		81C73175284637E1001CFC35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73174284637E1001CFC35 /* AppDelegate.swift */; };
 		81C73177284637E1001CFC35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73176284637E1001CFC35 /* SceneDelegate.swift */; };
 		81C73179284637E1001CFC35 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73178284637E1001CFC35 /* LoginViewController.swift */; };
@@ -92,6 +93,7 @@
 				8117438B2846872900542CAD /* RxCocoa in Frameworks */,
 				8117438F2846872900542CAD /* RxSwift in Frameworks */,
 				811743882846870E00542CAD /* Swinject in Frameworks */,
+				81B707F228487F5800136827 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +312,7 @@
 				8117438A2846872900542CAD /* RxCocoa */,
 				8117438C2846872900542CAD /* RxRelay */,
 				8117438E2846872900542CAD /* RxSwift */,
+				81B707F128487F5800136827 /* SDWebImage */,
 			);
 			productName = LoginRXSwift;
 			productReference = 81C73171284637E1001CFC35 /* CountriesRXSwift.app */;
@@ -386,6 +389,7 @@
 			packageReferences = (
 				811743862846870E00542CAD /* XCRemoteSwiftPackageReference "Swinject" */,
 				811743892846872900542CAD /* XCRemoteSwiftPackageReference "RxSwift" */,
+				81B707F028487F5800136827 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 81C73172284637E1001CFC35 /* Products */;
 			projectDirPath = "";
@@ -808,6 +812,14 @@
 				kind = branch;
 			};
 		};
+		81B707F028487F5800136827 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -830,6 +842,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 811743892846872900542CAD /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		81B707F128487F5800136827 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81B707F028487F5800136827 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

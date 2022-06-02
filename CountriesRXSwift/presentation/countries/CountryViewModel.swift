@@ -8,15 +8,18 @@
 import RxSwift
 
 protocol CountryViewModelProvision {
-    var service: CountryService { get set }
+    var service: CountryService { get }
     var countries: PublishSubject<[Country]> { get }
+    var selectedCountry: PublishSubject<Country> { get }
     func fetchCountries()
+    func setSelectedCountry(country: Country) 
 }
 
 class CountryViewModel: CountryViewModelProvision {
-    internal var service: CountryService
-    var countries = PublishSubject<[Country]>()
-    
+    internal let service: CountryService
+    let countries = PublishSubject<[Country]>()
+    let selectedCountry = PublishSubject<Country>()
+
     init(service: CountryService){
         self.service = service
     }
@@ -31,5 +34,10 @@ class CountryViewModel: CountryViewModelProvision {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    func setSelectedCountry(country: Country) {
+        self.selectedCountry.onNext(country)
+        self.selectedCountry.onCompleted()
     }
 }
