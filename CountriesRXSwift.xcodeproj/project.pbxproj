@@ -17,6 +17,10 @@
 		818DC7312846D44A00AA7154 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DC7302846D44A00AA7154 /* SettingsViewController.swift */; };
 		818DC7332846DADA00AA7154 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DC7322846DADA00AA7154 /* TabBar.swift */; };
 		818DC7352846E3AE00AA7154 /* CountriesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DC7342846E3AE00AA7154 /* CountriesDetailViewController.swift */; };
+		818DC739284854A400AA7154 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DC738284854A400AA7154 /* CountryViewModel.swift */; };
+		818DC73C2848587B00AA7154 /* CountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DC73B2848587B00AA7154 /* CountryService.swift */; };
+		818DC73F2848590900AA7154 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DC73E2848590900AA7154 /* Country.swift */; };
+		818DC74128485AC400AA7154 /* CountryServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DC74028485AC400AA7154 /* CountryServiceImplementation.swift */; };
 		81C73175284637E1001CFC35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73174284637E1001CFC35 /* AppDelegate.swift */; };
 		81C73177284637E1001CFC35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73176284637E1001CFC35 /* SceneDelegate.swift */; };
 		81C73179284637E1001CFC35 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73178284637E1001CFC35 /* LoginViewController.swift */; };
@@ -56,6 +60,10 @@
 		818DC7302846D44A00AA7154 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		818DC7322846DADA00AA7154 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		818DC7342846E3AE00AA7154 /* CountriesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesDetailViewController.swift; sourceTree = "<group>"; };
+		818DC738284854A400AA7154 /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
+		818DC73B2848587B00AA7154 /* CountryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryService.swift; sourceTree = "<group>"; };
+		818DC73E2848590900AA7154 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		818DC74028485AC400AA7154 /* CountryServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryServiceImplementation.swift; sourceTree = "<group>"; };
 		81C73171284637E1001CFC35 /* CountriesRXSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountriesRXSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C73174284637E1001CFC35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81C73176284637E1001CFC35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +150,7 @@
 			children = (
 				818DC72E2846D39900AA7154 /* CountriesListViewController.swift */,
 				818DC7342846E3AE00AA7154 /* CountriesDetailViewController.swift */,
+				818DC738284854A400AA7154 /* CountryViewModel.swift */,
 			);
 			path = countries;
 			sourceTree = "<group>";
@@ -157,6 +166,7 @@
 		818DC7362847BD2000AA7154 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				818DC74028485AC400AA7154 /* CountryServiceImplementation.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -166,6 +176,22 @@
 			children = (
 			);
 			path = exts;
+			sourceTree = "<group>";
+		};
+		818DC73A2848580B00AA7154 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				818DC73B2848587B00AA7154 /* CountryService.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		818DC73D284858C900AA7154 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				818DC73E2848590900AA7154 /* Country.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		81C73168284637E0001CFC35 = {
@@ -223,6 +249,8 @@
 		81C731A42846712A001CFC35 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				818DC73D284858C900AA7154 /* model */,
+				818DC73A2848580B00AA7154 /* service */,
 				81C73176284637E1001CFC35 /* SceneDelegate.swift */,
 				81C73174284637E1001CFC35 /* AppDelegate.swift */,
 			);
@@ -407,14 +435,18 @@
 				81C731AD28467632001CFC35 /* LBaseViewController.swift in Sources */,
 				8117439228469DF200542CAD /* DependencyRegistry.swift in Sources */,
 				81C73179284637E1001CFC35 /* LoginViewController.swift in Sources */,
+				818DC739284854A400AA7154 /* CountryViewModel.swift in Sources */,
+				818DC73C2848587B00AA7154 /* CountryService.swift in Sources */,
 				811743962846A3CE00542CAD /* Contants.swift in Sources */,
 				81C73175284637E1001CFC35 /* AppDelegate.swift in Sources */,
 				81C73177284637E1001CFC35 /* SceneDelegate.swift in Sources */,
 				818DC72F2846D39900AA7154 /* CountriesListViewController.swift in Sources */,
 				818DC7332846DADA00AA7154 /* TabBar.swift in Sources */,
+				818DC73F2848590900AA7154 /* Country.swift in Sources */,
 				818DC7352846E3AE00AA7154 /* CountriesDetailViewController.swift in Sources */,
 				81C731AF2846768E001CFC35 /* LoginViewModel.swift in Sources */,
 				818DC7312846D44A00AA7154 /* SettingsViewController.swift in Sources */,
+				818DC74128485AC400AA7154 /* CountryServiceImplementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +552,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -574,6 +607,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -593,7 +627,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2HB3YHCHVH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginRXSwift/Info.plist;
+				INFOPLIST_FILE = CountriesRXSwift/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -621,7 +655,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2HB3YHCHVH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginRXSwift/Info.plist;
+				INFOPLIST_FILE = CountriesRXSwift/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
