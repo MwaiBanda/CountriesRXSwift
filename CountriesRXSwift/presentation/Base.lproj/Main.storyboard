@@ -102,22 +102,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mP1-zO-SoZ">
-                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adk-R5-b1j">
+                                <rect key="frame" x="30" y="59" width="354" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9d3-52-N0A">
+                                <rect key="frame" x="30" y="95" width="354" height="169"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Agb-lI-tid">
+                                <rect key="frame" x="30" y="279" width="354" height="583"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hpA-ny-g8F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="mP1-zO-SoZ" firstAttribute="centerX" secondItem="zKt-XU-Z9D" secondAttribute="centerX" id="TPw-qN-Jvy"/>
-                            <constraint firstItem="mP1-zO-SoZ" firstAttribute="centerY" secondItem="zKt-XU-Z9D" secondAttribute="centerY" id="bTD-ni-Gvh"/>
+                            <constraint firstItem="hpA-ny-g8F" firstAttribute="trailing" secondItem="Adk-R5-b1j" secondAttribute="trailing" constant="30" id="1HH-sI-oy0"/>
+                            <constraint firstItem="Adk-R5-b1j" firstAttribute="leading" secondItem="hpA-ny-g8F" secondAttribute="leading" constant="30" id="DSK-4t-w8y"/>
+                            <constraint firstItem="9d3-52-N0A" firstAttribute="leading" secondItem="hpA-ny-g8F" secondAttribute="leading" constant="30" id="FU2-8d-75A"/>
+                            <constraint firstItem="9d3-52-N0A" firstAttribute="top" secondItem="Adk-R5-b1j" secondAttribute="bottom" constant="15" id="Gwg-dg-FYj"/>
+                            <constraint firstItem="hpA-ny-g8F" firstAttribute="bottom" secondItem="9d3-52-N0A" secondAttribute="bottom" constant="598" id="YlA-k0-8iz"/>
+                            <constraint firstItem="Agb-lI-tid" firstAttribute="top" secondItem="9d3-52-N0A" secondAttribute="bottom" constant="15" id="abe-gs-egu"/>
+                            <constraint firstItem="Adk-R5-b1j" firstAttribute="top" secondItem="hpA-ny-g8F" secondAttribute="top" constant="15" id="ceo-1s-mYm"/>
+                            <constraint firstItem="Agb-lI-tid" firstAttribute="bottom" secondItem="hpA-ny-g8F" secondAttribute="bottom" id="qme-Uz-LsW"/>
+                            <constraint firstItem="Agb-lI-tid" firstAttribute="leading" secondItem="hpA-ny-g8F" secondAttribute="leading" constant="30" id="rgq-zD-3oP"/>
+                            <constraint firstItem="hpA-ny-g8F" firstAttribute="trailing" secondItem="Agb-lI-tid" secondAttribute="trailing" constant="30" id="uux-5Y-Plx"/>
+                            <constraint firstItem="hpA-ny-g8F" firstAttribute="trailing" secondItem="9d3-52-N0A" secondAttribute="trailing" constant="30" id="yes-wZ-y1k"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="countryname" destination="mP1-zO-SoZ" id="gBr-T3-Lx2"/>
+                        <outlet property="countryFlag" destination="9d3-52-N0A" id="54o-cF-eih"/>
+                        <outlet property="countryName" destination="Adk-R5-b1j" id="tGt-HO-UvF"/>
+                        <outlet property="tableView" destination="Agb-lI-tid" id="Y4o-bf-9Mr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAG-BO-IoW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -20,11 +20,13 @@ struct CountryResponse: Codable {
 struct Country: Codable {
     var name: String
     var unicodeFlag: String
-    var abbreviation: String
+    var flagURL: String?
+    var cities: [String]?
 
     enum CodingKeys: String, CodingKey {
         case name
         case unicodeFlag
-        case abbreviation = "iso3"
+        case cities
+        case flagURL = "flag"
     }
 }

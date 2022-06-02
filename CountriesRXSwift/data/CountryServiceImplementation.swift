@@ -11,7 +11,7 @@ class CountryServiceImplementation: CountryService {
     var baseURL: String
     
     func getCountries(onCompletion: @escaping (Result<[Country], Error>) -> Void) {
-        guard let url = URL(string: "\(baseURL)api/v0.1/countries/flag/unicode") else {
+        guard let url = URL(string: "\(baseURL)/api/v0.1/countries/info?returns=currency,flag,unicodeFlag,cities") else {
             print("Error: Invalid URL")
             return
         }
@@ -49,6 +49,6 @@ class CountryServiceImplementation: CountryService {
     }
     
     init() {
-        baseURL = "https://countriesnow.space/"
+        baseURL = "https://countriesnow.space"
     }
 }

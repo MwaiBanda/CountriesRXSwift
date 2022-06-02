@@ -37,7 +37,6 @@ class CountriesListViewController: LBaseViewController {
         }.disposed(by: disposeBag)
         
         tableView.rx.modelSelected(Country.self).bind { country in
-            self.countryViewModel.setSelectedCountry(country: country)
             let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
             if let destination  = storyboard.instantiateViewController(withIdentifier: "CountriesDetailViewController") as? CountriesDetailViewController {
                 destination.country = country
@@ -53,9 +52,7 @@ class CountriesListViewController: LBaseViewController {
         self.tabBarController?.navigationItem.hidesBackButton = true
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.barTintColor = .systemGray5
-
         countryViewModel.fetchCountries()
-        
     }
 
 }
