@@ -7,16 +7,30 @@
 
 import UIKit
 import Swinject
+import RxSwift
 
 class CountriesListViewController: LBaseViewController {
     
     private var countryViewModel: CountryViewModelProvision!
-
+    private var disposeBag: DisposeBag!
+    private let tableView: UITableView = {
+        let table =  UITableView()
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        return table
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        countryViewModel = Assembler.sharedInstance.resolver.resolve(CountryViewModelProvision.self, name: Constants.CountryViewModel)
+        self.countryViewModel = Assembler.sharedInstance.resolver.resolve(CountryViewModelProvision.self, name: Constants.CountryViewModel)
+        self.disposeBag = Assembler.sharedInstance.resolver.resolve(DisposeBag.self, name: Constants.DisposeBag)
+        view.addSubview(tableView)
+        tableView.frame = view.bounds
+        
+        countryViewModel.countries.bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: UITableViewCell.self)){ row, country, cell in
+            cell.textLabel?.text = country.name
+        }.disposed(by: disposeBag)
     }
-    
+   
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

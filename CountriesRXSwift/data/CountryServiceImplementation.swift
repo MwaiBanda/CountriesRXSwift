@@ -25,7 +25,6 @@ class CountryServiceImplementation: CountryService {
                             do {
                                 let countryResponse = try JSONDecoder().decode(CountryResponse.self, from: data)
                                 onCompletion(.success(countryResponse.collection))
-                                print(countryResponse.collection)
                             } catch DecodingError.dataCorrupted(let context) {
                                 print(context)
                             } catch DecodingError.keyNotFound(let key, let context) {
