@@ -14,8 +14,8 @@ class CountriesDetailViewController: LBaseViewController {
     var country: Country?
     private var countryViewModel: CountryViewModelProvision!
     private var disposeBag: DisposeBag!
-    @IBOutlet weak var countryName: UILabel!
-    @IBOutlet weak var countryFlag: UIImageView!
+    @IBOutlet weak var lbCountryName: UILabel!
+    @IBOutlet weak var imgCountryFlag: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +28,10 @@ class CountriesDetailViewController: LBaseViewController {
         countryViewModel.selectedCountry
             .map{ $0.name }
             .asObservable()
-            .bind(to: countryName.rx.text)
+            .bind(to: lbCountryName.rx.text)
             .disposed(by: disposeBag)
         
-        countryName.font = .preferredCustomFont(forTextStyle: .title1, weight: .black)
+        lbCountryName.font = .preferredCustomFont(forTextStyle: .title1, weight: .black)
         
        
         countryViewModel.selectedCities.bind(to: tableView.rx.items(cellIdentifier: "cityCell", cellType: UITableViewCell.self)){ row, city, cell in
@@ -44,10 +44,10 @@ class CountriesDetailViewController: LBaseViewController {
         if let country = country {
             self.countryViewModel.setSelectedCountry(country: country)
             if let imageURL = country.flagURL {
-                countryFlag.sd_setImage(with: URL(string: imageURL))
+                imgCountryFlag.sd_setImage(with: URL(string: imageURL))
             } else {
-                countryFlag.image = UIImage(systemName: "photo")
-                countryFlag.tintColor = .gray
+                imgCountryFlag.image = UIImage(systemName: "photo")
+                imgCountryFlag.tintColor = .gray
             }
         }
     }

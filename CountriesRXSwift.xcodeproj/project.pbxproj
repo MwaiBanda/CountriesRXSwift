@@ -16,6 +16,9 @@
 		8170AD5B2849078800CBEA78 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 8170AD5A2849078800CBEA78 /* SDWebImageSVGCoder */; };
 		8170AD5D28491AEA00CBEA78 /* UIFont+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8170AD5C28491AEA00CBEA78 /* UIFont+Swift.swift */; };
 		8170AD5F2849250D00CBEA78 /* CountryViewModelProvision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8170AD5E2849250D00CBEA78 /* CountryViewModelProvision.swift */; };
+		8170AD63284A0F3D00CBEA78 /* LPasswordHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8170AD62284A0F3D00CBEA78 /* LPasswordHint.swift */; };
+		8170AD65284A159F00CBEA78 /* PasswordValidityCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8170AD64284A159F00CBEA78 /* PasswordValidityCheck.swift */; };
+		8170AD67284A15FE00CBEA78 /* LoginViewModelProvision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8170AD66284A15FE00CBEA78 /* LoginViewModelProvision.swift */; };
 		818DC72F2846D39900AA7154 /* CountriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DC72E2846D39900AA7154 /* CountriesListViewController.swift */; };
 		818DC7312846D44A00AA7154 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DC7302846D44A00AA7154 /* SettingsViewController.swift */; };
 		818DC7332846DADA00AA7154 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DC7322846DADA00AA7154 /* TabBar.swift */; };
@@ -62,6 +65,9 @@
 		811743952846A3CE00542CAD /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		8170AD5C28491AEA00CBEA78 /* UIFont+Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Swift.swift"; sourceTree = "<group>"; };
 		8170AD5E2849250D00CBEA78 /* CountryViewModelProvision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModelProvision.swift; sourceTree = "<group>"; };
+		8170AD62284A0F3D00CBEA78 /* LPasswordHint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPasswordHint.swift; sourceTree = "<group>"; };
+		8170AD64284A159F00CBEA78 /* PasswordValidityCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidityCheck.swift; sourceTree = "<group>"; };
+		8170AD66284A15FE00CBEA78 /* LoginViewModelProvision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelProvision.swift; sourceTree = "<group>"; };
 		818DC72E2846D39900AA7154 /* CountriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListViewController.swift; sourceTree = "<group>"; };
 		818DC7302846D44A00AA7154 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		818DC7322846DADA00AA7154 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -141,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				811743952846A3CE00542CAD /* Contants.swift */,
+				8170AD64284A159F00CBEA78 /* PasswordValidityCheck.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -286,6 +293,7 @@
 				81C731A82846722F001CFC35 /* LButton.swift */,
 				81C731AA28467254001CFC35 /* LTextField.swift */,
 				81C731AC28467632001CFC35 /* LBaseViewController.swift */,
+				8170AD62284A0F3D00CBEA78 /* LPasswordHint.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -295,6 +303,7 @@
 			children = (
 				81C73178284637E1001CFC35 /* LoginViewController.swift */,
 				81C731AE2846768E001CFC35 /* LoginViewModel.swift */,
+				8170AD66284A15FE00CBEA78 /* LoginViewModelProvision.swift */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -450,12 +459,15 @@
 				8117439228469DF200542CAD /* DependencyRegistry.swift in Sources */,
 				81C73179284637E1001CFC35 /* LoginViewController.swift in Sources */,
 				8170AD5F2849250D00CBEA78 /* CountryViewModelProvision.swift in Sources */,
+				8170AD67284A15FE00CBEA78 /* LoginViewModelProvision.swift in Sources */,
 				818DC739284854A400AA7154 /* CountryViewModel.swift in Sources */,
 				818DC73C2848587B00AA7154 /* CountryService.swift in Sources */,
 				811743962846A3CE00542CAD /* Contants.swift in Sources */,
+				8170AD65284A159F00CBEA78 /* PasswordValidityCheck.swift in Sources */,
 				81C73175284637E1001CFC35 /* AppDelegate.swift in Sources */,
 				81C73177284637E1001CFC35 /* SceneDelegate.swift in Sources */,
 				818DC72F2846D39900AA7154 /* CountriesListViewController.swift in Sources */,
+				8170AD63284A0F3D00CBEA78 /* LPasswordHint.swift in Sources */,
 				818DC7332846DADA00AA7154 /* TabBar.swift in Sources */,
 				818DC73F2848590900AA7154 /* Country.swift in Sources */,
 				818DC7352846E3AE00AA7154 /* CountriesDetailViewController.swift in Sources */,

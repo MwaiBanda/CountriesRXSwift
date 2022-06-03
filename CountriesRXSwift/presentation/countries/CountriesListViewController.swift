@@ -26,6 +26,7 @@ class CountriesListViewController: LBaseViewController {
         super.viewDidLoad()
         self.countryViewModel = Assembler.sharedInstance.resolver.resolve(CountryViewModelProvision.self, name: Constants.CountryViewModel)
         self.disposeBag = Assembler.sharedInstance.resolver.resolve(DisposeBag.self, name: Constants.DisposeBag)
+        
         view.addSubview(tableView)
         tableView.frame = view.bounds
         tableView.backgroundColor = .systemGray5
@@ -33,7 +34,6 @@ class CountriesListViewController: LBaseViewController {
         countryViewModel.countries.bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: UITableViewCell.self)){ row, country, cell in
             cell.backgroundColor = .systemGray5
             cell.textLabel?.text = "\(country.unicodeFlag) \(country.name)"
-            
         }.disposed(by: disposeBag)
         
         tableView.rx.modelSelected(Country.self).bind { country in

@@ -21,7 +21,8 @@ class LButton: UIButton {
     private func setupLBtn() {
         layer.cornerRadius = 5
         backgroundColor = .orange
-        setTitleColor(.black, for: .normal)
+        setTitleColor(.systemGray5, for: .normal)
+        
         
         
     }

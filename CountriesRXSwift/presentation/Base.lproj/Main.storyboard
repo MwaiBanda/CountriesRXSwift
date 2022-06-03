@@ -18,43 +18,94 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4pA-JS-pfU" customClass="LTextField" customModule="CountriesRXSwift" customModuleProvider="target">
-                                <rect key="frame" x="30" y="238" width="354" height="34"/>
+                                <rect key="frame" x="30" y="259" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kc0-bm-Pmw" customClass="LTextField" customModule="CountriesRXSwift" customModuleProvider="target">
-                                <rect key="frame" x="30" y="302" width="354" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kc0-bm-Pmw" customClass="LTextField" customModule="CountriesRXSwift" customModuleProvider="target">
+                                <rect key="frame" x="30" y="323" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FC3-Ix-LYX" customClass="LButton" customModule="CountriesRXSwift" customModuleProvider="target">
-                                <rect key="frame" x="30" y="366" width="354" height="31"/>
+                                <rect key="frame" x="30" y="387" width="354" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
                                     <color key="baseForegroundColor" systemColor="systemGray6Color"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onLoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oi5-sq-COx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCd-WI-h5U">
+                                <rect key="frame" x="30" y="208" width="354" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vp-WY-zlp" customClass="LPasswordHint" customModule="CountriesRXSwift" customModuleProvider="target">
+                                <rect key="frame" x="30" y="433" width="354" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ble-Nb-jUb" customClass="LPasswordHint" customModule="CountriesRXSwift" customModuleProvider="target">
+                                <rect key="frame" x="30" y="464" width="354" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoM-8H-h7S" customClass="LPasswordHint" customModule="CountriesRXSwift" customModuleProvider="target">
+                                <rect key="frame" x="30" y="495" width="354" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yY-7I-qSB" customClass="LPasswordHint" customModule="CountriesRXSwift" customModuleProvider="target">
+                                <rect key="frame" x="30" y="526" width="354" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FC3-Ix-LYX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="8Vh-LA-Jpe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kc0-bm-Pmw" secondAttribute="trailing" constant="30" id="EHI-mK-fYv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FC3-Ix-LYX" secondAttribute="trailing" constant="30" id="GZu-Sw-FN8"/>
-                            <constraint firstItem="kc0-bm-Pmw" firstAttribute="top" secondItem="4pA-JS-pfU" secondAttribute="bottom" constant="30" id="OW0-SQ-Vbi"/>
-                            <constraint firstItem="FC3-Ix-LYX" firstAttribute="top" secondItem="kc0-bm-Pmw" secondAttribute="bottom" constant="30" id="Uei-tO-nyT"/>
-                            <constraint firstItem="4pA-JS-pfU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="cEU-By-Q3U"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4pA-JS-pfU" secondAttribute="trailing" constant="30" id="gtJ-y1-cVM"/>
-                            <constraint firstItem="kc0-bm-Pmw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="og5-2P-ryu"/>
-                            <constraint firstItem="4pA-JS-pfU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="zW3-Vf-wmn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UCd-WI-h5U" secondAttribute="trailing" constant="30" id="0Yb-R5-vLT"/>
+                            <constraint firstItem="7yY-7I-qSB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="1og-Nd-SU6"/>
+                            <constraint firstItem="FC3-Ix-LYX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="BQo-1c-WuO"/>
+                            <constraint firstItem="0Vp-WY-zlp" firstAttribute="top" secondItem="FC3-Ix-LYX" secondAttribute="bottom" constant="15" id="DJl-5g-umm"/>
+                            <constraint firstItem="QoM-8H-h7S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="DU6-Wk-c1r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7yY-7I-qSB" secondAttribute="trailing" constant="30" id="Hfm-zP-eKs"/>
+                            <constraint firstItem="Ble-Nb-jUb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="KeZ-cX-AGQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QoM-8H-h7S" secondAttribute="trailing" constant="30" id="MLN-f0-E1l"/>
+                            <constraint firstItem="7yY-7I-qSB" firstAttribute="top" secondItem="QoM-8H-h7S" secondAttribute="bottom" constant="10" id="TlT-2U-xxQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kc0-bm-Pmw" secondAttribute="trailing" constant="30" id="UCt-eN-8L4"/>
+                            <constraint firstItem="UCd-WI-h5U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="Ynp-MW-Id6"/>
+                            <constraint firstItem="4pA-JS-pfU" firstAttribute="top" secondItem="UCd-WI-h5U" secondAttribute="bottom" constant="30" id="apb-hd-XYW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ble-Nb-jUb" secondAttribute="trailing" constant="30" id="bmV-X8-xg9"/>
+                            <constraint firstItem="kc0-bm-Pmw" firstAttribute="top" secondItem="4pA-JS-pfU" secondAttribute="bottom" constant="30" id="cJI-xG-huE"/>
+                            <constraint firstItem="kc0-bm-Pmw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="dHf-JI-Jat"/>
+                            <constraint firstItem="FC3-Ix-LYX" firstAttribute="top" secondItem="kc0-bm-Pmw" secondAttribute="bottom" constant="30" id="fgR-EN-5pO"/>
+                            <constraint firstItem="QoM-8H-h7S" firstAttribute="top" secondItem="Ble-Nb-jUb" secondAttribute="bottom" constant="10" id="iTG-8R-4Ae"/>
+                            <constraint firstItem="4pA-JS-pfU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="kVH-1u-MQG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Vp-WY-zlp" secondAttribute="trailing" constant="30" id="nlG-aA-sl9"/>
+                            <constraint firstItem="0Vp-WY-zlp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ooZ-M4-hcN"/>
+                            <constraint firstItem="UCd-WI-h5U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="tuc-bM-Xv9"/>
+                            <constraint firstItem="Ble-Nb-jUb" firstAttribute="top" secondItem="0Vp-WY-zlp" secondAttribute="bottom" constant="10" id="vOg-aH-GsA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4pA-JS-pfU" secondAttribute="trailing" constant="30" id="wWm-HM-QcG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FC3-Ix-LYX" secondAttribute="trailing" constant="30" id="wap-ZK-KtA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dmG-gD-AOp"/>
                     <connections>
                         <outlet property="btnLogin" destination="FC3-Ix-LYX" id="U8c-eV-IH6"/>
+                        <outlet property="lbCountry" destination="UCd-WI-h5U" id="mXG-Fp-7CD"/>
+                        <outlet property="lbPasswordError1" destination="0Vp-WY-zlp" id="pFu-g0-SYP"/>
+                        <outlet property="lbPasswordError2" destination="Ble-Nb-jUb" id="c1y-O7-TE4"/>
+                        <outlet property="lbPasswordError3" destination="QoM-8H-h7S" id="vxL-hT-v0C"/>
+                        <outlet property="lbPasswordError4" destination="7yY-7I-qSB" id="AY5-ZC-xyJ"/>
                         <outlet property="txtPassword" destination="kc0-bm-Pmw" id="mxf-os-UG0"/>
                         <outlet property="txtUsername" destination="4pA-JS-pfU" id="I8J-S9-Vd0"/>
                     </connections>
@@ -163,8 +214,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="countryFlag" destination="6eb-7e-1hN" id="8Y5-K9-cVa"/>
-                        <outlet property="countryName" destination="t51-J0-UeU" id="DBc-x1-dEE"/>
+                        <outlet property="imgCountryFlag" destination="6eb-7e-1hN" id="8Y5-K9-cVa"/>
+                        <outlet property="lbCountryName" destination="t51-J0-UeU" id="DBc-x1-dEE"/>
                         <outlet property="tableView" destination="ipn-SI-zwK" id="hFC-ix-i0B"/>
                     </connections>
                 </viewController>
