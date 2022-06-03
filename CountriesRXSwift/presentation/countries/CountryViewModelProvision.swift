@@ -12,7 +12,7 @@ protocol CountryViewModelProvision {
     var countries: PublishSubject<[Country]> { get }
     var selectedCities: PublishSubject<[String]> { get }
     var selectedCountry: PublishSubject<Country> { get }
-    
+    var itemCount: Int { get }
     func fetchCountries()
     func setSelectedCountry(country: Country)
 }

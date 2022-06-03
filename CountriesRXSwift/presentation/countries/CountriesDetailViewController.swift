@@ -17,7 +17,6 @@ class CountriesDetailViewController: LBaseViewController {
     @IBOutlet weak var countryName: UILabel!
     @IBOutlet weak var countryFlag: UIImageView!
     @IBOutlet weak var tableView: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.countryViewModel = Assembler.sharedInstance.resolver.resolve(CountryViewModelProvision.self, name: Constants.CountryViewModel)
@@ -25,7 +24,7 @@ class CountriesDetailViewController: LBaseViewController {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cityCell")
         tableView.backgroundColor = .systemGray5
-        
+
         countryViewModel.selectedCountry
             .map{ $0.name }
             .asObservable()
