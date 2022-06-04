@@ -6,31 +6,50 @@
 //
 
 import XCTest
-@testable import LoginRXSwift
+import RxTest
+import RxSwift
+@testable import CountriesRXSwift
 
 class LoginRXSwiftTests: XCTestCase {
-
+    var sut : LoginViewModelProvision!
+    var scheduler: TestScheduler!
+    var disposeBag: DisposeBag!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        sut = LoginViewModel()
+        scheduler = TestScheduler(initialClock: 0)
+        disposeBag = DisposeBag()
+        try super.setUpWithError()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+         sut = nil
+         scheduler = nil
+         disposeBag = nil
+        try super.tearDownWithError()
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+    func testUsernameAcceptsInput() throws {
+        let username = scheduler.createObserver(String.self)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        let observable = scheduler.createHotObservable([
+            .next(100, "1"),
+            .next(101, "2")
+        ])
+        
+        observable.subscribe(username).disposed(by: disposeBag)
+        
+        scheduler.start()
+        
+        let results = username.events.compactMap {
+          $0.value.element
         }
+        
+        XCTAssertEqual(results, ["1", "2"])
+    }
+
+    func testPerformance() throws {
+        self.measure { }
     }
 
 }

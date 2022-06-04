@@ -16,12 +16,11 @@ final class LoginViewModel: LoginViewModelProvision {
     let username = PublishSubject<String>()
     let password = PublishSubject<String>()
     let passwordError1 = BehaviorRelay<String>(value: "")
-    
     let passwordError2 = BehaviorRelay<String>(value: "")
     let passwordError3 = BehaviorRelay<String>(value: "")
     let passwordError4 = BehaviorRelay<String>(value: "")
-    
     var passwordChecks = Set([PasswordValidityCheck]())
+
     
     func inputIsValid() -> Observable<Bool> {
         return Observable.combineLatest(username.asObserver(), password.asObserver()).startWith(("", "")).map { [unowned self] username, password in
@@ -46,10 +45,10 @@ final class LoginViewModel: LoginViewModelProvision {
                 passwordChecks.insert(.containsSpecialCharacter)
             }
         }
-        if !password.isEmpty {
-            assignErrors(passwordChecks: passwordChecks)
-        } else {
+        if password.isEmpty {
             clearPasswordErrorMessages()
+        } else {
+            assignErrors(passwordChecks: passwordChecks)
         }
         return passwordChecks.count == 4
     }
