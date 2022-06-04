@@ -29,24 +29,38 @@ class LoginRXSwiftTests: XCTestCase {
         try super.tearDownWithError()
     }
 
-    func testUsernameAcceptsInput() throws {
-        let username = scheduler.createObserver(String.self)
+    func testUsernameAndPasswordInputValidity() throws {
+        let isValidInputObserver = scheduler.createObserver(Bool.self)
+        let superValidPassword = "Pass-word2022"
+        let superInValidPassword = "password"
+        
+        sut.inputIsValid()
+            .bind(to: isValidInputObserver)
+            .disposed(by: disposeBag)
+        
+        sut.setUsername(username: "MwaiB1")
+        sut.setPassword(password: superValidPassword)
+        sut.setPassword(password: superInValidPassword)
 
-        let observable = scheduler.createHotObservable([
-            .next(100, "1"),
-            .next(101, "2")
-        ])
-        
-        observable.subscribe(username).disposed(by: disposeBag)
-        
         scheduler.start()
         
-        let results = username.events.compactMap {
+        let results = isValidInputObserver.events.compactMap {
           $0.value.element
         }
         
-        XCTAssertEqual(results, ["1", "2"])
+        XCTAssertEqual(results[results.endIndex - 1], true)
+        XCTAssertEqual(results.last, false)
+
     }
+    
+    func testPasswordValidity() throws {
+        let superValidPassword = "Pass-word2022"
+        let superInValidPassword = "password"
+
+        XCTAssertTrue(sut.isValidPassword(password: superValidPassword))
+        XCTAssertFalse(sut.isValidPassword(password: superInValidPassword))
+    }
+    
 
     func testPerformance() throws {
         self.measure { }

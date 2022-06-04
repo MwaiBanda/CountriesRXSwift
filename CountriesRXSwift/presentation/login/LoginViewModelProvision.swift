@@ -18,6 +18,9 @@ protocol LoginViewModelProvision {
     var passwordError3: BehaviorRelay<String> { get }
     var passwordError4: BehaviorRelay<String> { get }
     var passwordChecks: Set<PasswordValidityCheck> { get }
+    
+    func setUsername(username: String) 
+    func setPassword(password: String)
 
     func inputIsValid() -> Observable<Bool>
     func isValidPassword(password: String) -> Bool

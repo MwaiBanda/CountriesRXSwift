@@ -21,7 +21,13 @@ final class LoginViewModel: LoginViewModelProvision {
     let passwordError4 = BehaviorRelay<String>(value: "")
     var passwordChecks = Set([PasswordValidityCheck]())
 
-    
+    func setUsername(username: String) {
+        self.username.onNext(username)
+
+    }
+    func setPassword(password: String) {
+        self.password.onNext(password)
+    }
     func inputIsValid() -> Observable<Bool> {
         return Observable.combineLatest(username.asObserver(), password.asObserver()).startWith(("", "")).map { [unowned self] username, password in
             
