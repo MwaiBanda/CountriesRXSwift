@@ -10,7 +10,7 @@ import RxTest
 import RxSwift
 @testable import CountriesRXSwift
 
-class LoginRXSwiftTests: XCTestCase {
+class LoginViewModelTests: XCTestCase {
     var sut : LoginViewModelProvision!
     var scheduler: TestScheduler!
     var disposeBag: DisposeBag!
@@ -59,6 +59,25 @@ class LoginRXSwiftTests: XCTestCase {
 
         XCTAssertTrue(sut.isValidPassword(password: superValidPassword))
         XCTAssertFalse(sut.isValidPassword(password: superInValidPassword))
+    }
+    
+    func testPasswordMissingSpecialCharacterErrorMessage(){
+        let errorMessageObserver = scheduler.createObserver(String.self)
+        
+        sut.passwordError1
+            .bind(to: errorMessageObserver)
+            .disposed(by: disposeBag)
+
+        let passwordMissingSpecialCharacter = "Password2022"
+        
+        let _ = sut.isValidPassword(password: passwordMissingSpecialCharacter)
+        scheduler.start()
+        
+        let result = errorMessageObserver.events.compactMap {
+            $0.value.element
+        }
+        
+        XCTAssertEqual(result.last, Constants.PasswordNoSPCharacter)
     }
     
 

@@ -26,6 +26,7 @@
 		818DC73C2848587B00AA7154 /* CountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DC73B2848587B00AA7154 /* CountryService.swift */; };
 		818DC73F2848590900AA7154 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DC73E2848590900AA7154 /* Country.swift */; };
 		818DC74128485AC400AA7154 /* CountryServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DC74028485AC400AA7154 /* CountryServiceImplementation.swift */; };
+		81AC9CDF284C521400D6DE38 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811743952846A3CE00542CAD /* Contants.swift */; };
 		81B707F228487F5800136827 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 81B707F128487F5800136827 /* SDWebImage */; };
 		81C73175284637E1001CFC35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73174284637E1001CFC35 /* AppDelegate.swift */; };
 		81C73177284637E1001CFC35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73176284637E1001CFC35 /* SceneDelegate.swift */; };
@@ -33,7 +34,7 @@
 		81C7317C284637E1001CFC35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C7317A284637E1001CFC35 /* Main.storyboard */; };
 		81C7317E284637EB001CFC35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C7317D284637EB001CFC35 /* Assets.xcassets */; };
 		81C73181284637EB001CFC35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C7317F284637EB001CFC35 /* LaunchScreen.storyboard */; };
-		81C7318C284637EB001CFC35 /* LoginRXSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7318B284637EB001CFC35 /* LoginRXSwiftTests.swift */; };
+		81C7318C284637EB001CFC35 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7318B284637EB001CFC35 /* LoginViewModelTests.swift */; };
 		81C73196284637EB001CFC35 /* LoginRXSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73195284637EB001CFC35 /* LoginRXSwiftUITests.swift */; };
 		81C73198284637EB001CFC35 /* LoginRXSwiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C73197284637EB001CFC35 /* LoginRXSwiftUITestsLaunchTests.swift */; };
 		81C731A92846722F001CFC35 /* LButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C731A82846722F001CFC35 /* LButton.swift */; };
@@ -89,7 +90,7 @@
 		81C73180284637EB001CFC35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81C73182284637EB001CFC35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81C73187284637EB001CFC35 /* CountriesRXSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountriesRXSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		81C7318B284637EB001CFC35 /* LoginRXSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRXSwiftTests.swift; sourceTree = "<group>"; };
+		81C7318B284637EB001CFC35 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		81C73191284637EB001CFC35 /* CountriesRXSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountriesRXSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C73195284637EB001CFC35 /* LoginRXSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRXSwiftUITests.swift; sourceTree = "<group>"; };
 		81C73197284637EB001CFC35 /* LoginRXSwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRXSwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -270,7 +271,7 @@
 		81C7318A284637EB001CFC35 /* CountriesRXSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				81C7318B284637EB001CFC35 /* LoginRXSwiftTests.swift */,
+				81C7318B284637EB001CFC35 /* LoginViewModelTests.swift */,
 			);
 			path = CountriesRXSwiftTests;
 			sourceTree = "<group>";
@@ -339,7 +340,6 @@
 				618CDA218726EE3564D55E6B /* Pods-CountriesRXSwiftTests.debug.xcconfig */,
 				838C034E7537E20B40DFB947 /* Pods-CountriesRXSwiftTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -443,9 +443,9 @@
 			);
 			mainGroup = 81C73168284637E0001CFC35;
 			packageReferences = (
-				811743862846870E00542CAD /* XCRemoteSwiftPackageReference "Swinject.git" */,
-				81B707F028487F5800136827 /* XCRemoteSwiftPackageReference "SDWebImage.git" */,
-				8170AD592849078800CBEA78 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder.git" */,
+				811743862846870E00542CAD /* XCRemoteSwiftPackageReference "Swinject" */,
+				81B707F028487F5800136827 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				8170AD592849078800CBEA78 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */,
 			);
 			productRefGroup = 81C73172284637E1001CFC35 /* Products */;
 			projectDirPath = "";
@@ -639,7 +639,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81C7318C284637EB001CFC35 /* LoginRXSwiftTests.swift in Sources */,
+				81C7318C284637EB001CFC35 /* LoginViewModelTests.swift in Sources */,
+				81AC9CDF284C521400D6DE38 /* Contants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -983,7 +984,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		811743862846870E00542CAD /* XCRemoteSwiftPackageReference "Swinject.git" */ = {
+		811743862846870E00542CAD /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
 			requirement = {
@@ -991,7 +992,7 @@
 				kind = branch;
 			};
 		};
-		8170AD592849078800CBEA78 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder.git" */ = {
+		8170AD592849078800CBEA78 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSVGCoder.git";
 			requirement = {
@@ -999,7 +1000,7 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		81B707F028487F5800136827 /* XCRemoteSwiftPackageReference "SDWebImage.git" */ = {
+		81B707F028487F5800136827 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
 			requirement = {
@@ -1012,17 +1013,17 @@
 /* Begin XCSwiftPackageProductDependency section */
 		811743872846870E00542CAD /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 811743862846870E00542CAD /* XCRemoteSwiftPackageReference "Swinject.git" */;
+			package = 811743862846870E00542CAD /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
 		};
 		8170AD5A2849078800CBEA78 /* SDWebImageSVGCoder */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8170AD592849078800CBEA78 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder.git" */;
+			package = 8170AD592849078800CBEA78 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */;
 			productName = SDWebImageSVGCoder;
 		};
 		81B707F128487F5800136827 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 81B707F028487F5800136827 /* XCRemoteSwiftPackageReference "SDWebImage.git" */;
+			package = 81B707F028487F5800136827 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
