@@ -32,6 +32,7 @@ class CountryViewModelTests: XCTestCase {
         scheduler = nil
         disposeBag = nil
     }
+    
     func testFetchCountries() throws {
         let countriesObserver = scheduler.createObserver([Country].self)
         
@@ -47,9 +48,44 @@ class CountryViewModelTests: XCTestCase {
             $0.value.element
         }
         XCTAssertEqual(results.last?.last?.name, "Zambia")
+        XCTAssertEqual(results.last?.last?.unicodeFlag, "🇿🇲")
+
     }
 
-
+    func testSelectCountry() throws {
+        let countryObserver = scheduler.createObserver(Country.self)
+        let countriesObserver = scheduler.createObserver([Country].self)
+        
+        sut.countries
+            .bind(to: countriesObserver)
+            .disposed(by: disposeBag)
+        
+        sut.selectedCountry
+            .bind(to: countryObserver)
+            .disposed(by: disposeBag)
+        
+        sut.fetchCountries()
+        
+      
+        scheduler.start()
+        
+        let countries = countriesObserver.events.compactMap {
+            $0.value.element
+        }.last
+        
+        let countryToSelect = countries?.last
+        XCTAssertNotNil(countryToSelect)
+        
+        if let countryToSelect = countryToSelect {
+            sut.setSelectedCountry(country:  countryToSelect)
+        }
+        let results = countryObserver.events.compactMap {
+            $0.value.element
+        }
+        
+        XCTAssertEqual(results.last?.name, "Zambia")
+        XCTAssertEqual(results.last?.unicodeFlag, "🇿🇲")
+    }
 }
 
 class MockContentServiceImpl: CountryService  {
