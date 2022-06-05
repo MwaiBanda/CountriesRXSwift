@@ -48,7 +48,7 @@ class LoginViewModelTests: XCTestCase {
           $0.value.element
         }
         
-        XCTAssertEqual(results[results.endIndex - 1], true)
+        XCTAssertEqual(results.dropLast().last, true)
         XCTAssertEqual(results.last, false)
 
     }
@@ -61,7 +61,7 @@ class LoginViewModelTests: XCTestCase {
         XCTAssertFalse(sut.isValidPassword(password: superInValidPassword))
     }
     
-    func testPasswordMissingSpecialCharacterErrorMessage(){
+    func testPasswordMissingSpecialCharacterErrorMessage() throws {
         let errorMessageObserver = scheduler.createObserver(String.self)
         
         sut.passwordError1
@@ -80,9 +80,60 @@ class LoginViewModelTests: XCTestCase {
         XCTAssertEqual(result.last, Constants.PasswordNoSPCharacter)
     }
     
+    func testPasswordMissingUppercaseErrorMessage() throws {
+        let errorMessageObserver = scheduler.createObserver(String.self)
+        
+        sut.passwordError1
+            .bind(to: errorMessageObserver)
+            .disposed(by: disposeBag)
 
-    func testPerformance() throws {
-        self.measure { }
+        let passwordMissingUppercase = "pass-word2022"
+        
+        let _ = sut.isValidPassword(password: passwordMissingUppercase)
+        scheduler.start()
+        
+        let result = errorMessageObserver.events.compactMap {
+            $0.value.element
+        }
+        
+        XCTAssertEqual(result.last, Constants.PasswordNoUpperCase)
+    }
+    
+    func testPasswordMissingNumberErrorMessage() throws {
+        let errorMessageObserver = scheduler.createObserver(String.self)
+        
+        sut.passwordError1
+            .bind(to: errorMessageObserver)
+            .disposed(by: disposeBag)
+
+        let passwordMissingUppercase = "Pass-word"
+        
+        let _ = sut.isValidPassword(password: passwordMissingUppercase)
+        scheduler.start()
+        
+        let result = errorMessageObserver.events.compactMap {
+            $0.value.element
+        }
+        
+        XCTAssertEqual(result.last, Constants.PasswordNoNumber)
     }
 
+    func testPasswordNotLongEnoughErrorMessage() throws {
+        let errorMessageObserver = scheduler.createObserver(String.self)
+        
+        sut.passwordError1
+            .bind(to: errorMessageObserver)
+            .disposed(by: disposeBag)
+
+        let passwordMissingUppercase = "Pass-2"
+        
+        let _ = sut.isValidPassword(password: passwordMissingUppercase)
+        scheduler.start()
+        
+        let result = errorMessageObserver.events.compactMap {
+            $0.value.element
+        }
+        
+        XCTAssertEqual(result.last, Constants.PasswordNotLong)
+    }
 }
