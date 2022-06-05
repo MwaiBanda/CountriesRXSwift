@@ -31,7 +31,7 @@ final class LoginViewController: LBaseViewController {
         self.disposeBag = Assembler.sharedInstance.resolver.resolve(DisposeBag.self, name: Constants.DisposeBag)
         
         lbCountry.text = "🌍 CountriesRx 🌎"
-        lbCountry.font = .preferredCustomFont(forTextStyle: .title1, weight: .black)
+        lbCountry.font = .preferredCustomFont(forTextStyle: .largeTitle, weight: .black)
         
         txtUsername.becomeFirstResponder()
        

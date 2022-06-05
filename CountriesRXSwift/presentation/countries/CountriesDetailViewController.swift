@@ -50,6 +50,7 @@ class CountriesDetailViewController: LBaseViewController {
                 imgCountryFlag.tintColor = .gray
             }
         }
+        self.tabBarController?.navigationItem.backBarButtonItem?.tintColor = .orange
     }
     
 }
