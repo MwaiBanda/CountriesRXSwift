@@ -12,23 +12,48 @@ import RxSwift
 
 
 class CountryViewModelTests: XCTestCase {
+    var sut: CountryViewModelProvision!
+    var mockService: CountryService!
+    var scheduler: TestScheduler!
+    var disposeBag: DisposeBag!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        try super.setUpWithError()
+        mockService = MockContentServiceImpl()
+        sut = CountryViewModel(service: mockService)
+        scheduler = TestScheduler(initialClock: 0)
+        disposeBag = DisposeBag()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        try super.tearDownWithError()
+        sut = nil
+        mockService = nil
+        scheduler = nil
+        disposeBag = nil
     }
-
-    func testExample() throws {
- 
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testFetchCountries() throws {
+        let countriesObserver = scheduler.createObserver([Country].self)
+        
+        sut.countries
+            .bind(to: countriesObserver)
+            .disposed(by: disposeBag)
+        
+        sut.fetchCountries()
+        
+        scheduler.start()
+        
+        let results = countriesObserver.events.compactMap {
+            $0.value.element
         }
+        XCTAssertEqual(results.last?.last?.name, "Zambia")
     }
 
+
+}
+
+class MockContentServiceImpl: CountryService  {
+    func getCountries(onCompletion: @escaping (Result<[Country], Error>) -> Void) {
+        onCompletion(.success([Country](repeating: Country(name: "Zambia", unicodeFlag: "🇿🇲", cities: ["Ndola", "Lusaka", "Livingstone", "Kitwe"]), count: 10)))
+    }
 }

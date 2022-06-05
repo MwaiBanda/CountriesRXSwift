@@ -16,17 +16,17 @@ class LoginViewModelTests: XCTestCase {
     var disposeBag: DisposeBag!
     
     override func setUpWithError() throws {
+        try super.setUpWithError()
         sut = LoginViewModel()
         scheduler = TestScheduler(initialClock: 0)
         disposeBag = DisposeBag()
-        try super.setUpWithError()
     }
 
     override func tearDownWithError() throws {
+         try super.tearDownWithError()
          sut = nil
          scheduler = nil
          disposeBag = nil
-        try super.tearDownWithError()
     }
 
     func testUsernameAndPasswordInputValidity() throws {
@@ -106,9 +106,9 @@ class LoginViewModelTests: XCTestCase {
             .bind(to: errorMessageObserver)
             .disposed(by: disposeBag)
 
-        let passwordMissingUppercase = "Pass-word"
+        let passwordMissingNumber = "Pass-word"
         
-        let _ = sut.isValidPassword(password: passwordMissingUppercase)
+        let _ = sut.isValidPassword(password: passwordMissingNumber)
         scheduler.start()
         
         let result = errorMessageObserver.events.compactMap {
@@ -125,9 +125,9 @@ class LoginViewModelTests: XCTestCase {
             .bind(to: errorMessageObserver)
             .disposed(by: disposeBag)
 
-        let passwordMissingUppercase = "Pass-2"
+        let passwordNotLongEnough = "Pass-2"
         
-        let _ = sut.isValidPassword(password: passwordMissingUppercase)
+        let _ = sut.isValidPassword(password: passwordNotLongEnough)
         scheduler.start()
         
         let result = errorMessageObserver.events.compactMap {
