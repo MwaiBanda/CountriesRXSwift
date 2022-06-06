@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SettingsViewController: LBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let childView = UIHostingController(rootView: SettingsView())
+        addChild(childView)
+        childView.view.frame = view.frame
+        view.addSubview(childView.view)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -20,14 +24,16 @@ class SettingsViewController: LBaseViewController {
         self.tabBarController?.navigationItem.hidesBackButton = true
 
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+
+struct SettingsView: View {
+    var body: some View {
+        ZStack {
+            Color(.systemGray5).ignoresSafeArea(.all)
+            VStack {
+                Text("We are in SwiftUI Now")
+            }
+        }
     }
-    */
-
 }
