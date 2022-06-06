@@ -86,10 +86,44 @@ class CountryViewModelTests: XCTestCase {
         XCTAssertEqual(results.last?.name, "Zambia")
         XCTAssertEqual(results.last?.unicodeFlag, "🇿🇲")
     }
+    
+    func testSelectCities() throws {
+        let citiesObserver = scheduler.createObserver([String].self)
+        let countriesObserver = scheduler.createObserver([Country].self)
+        
+        sut.countries
+            .bind(to: countriesObserver)
+            .disposed(by: disposeBag)
+        
+        sut.selectedCities
+            .bind(to: citiesObserver)
+            .disposed(by: disposeBag)
+        
+        sut.fetchCountries()
+        
+      
+        scheduler.start()
+        
+        let countries = countriesObserver.events.compactMap {
+            $0.value.element
+        }.last
+        
+        let countryToSelectCities = countries?.last
+        XCTAssertNotNil(countryToSelectCities)
+        
+        if let countryToSelectCities = countryToSelectCities {
+            sut.setSelectedCountry(country:  countryToSelectCities)
+        }
+        let results = citiesObserver.events.compactMap {
+            $0.value.element
+        }
+        
+        XCTAssertEqual(results.last, ["Ndola", "Lusaka", "Livingstone", "Kitwe"])
+    }
 }
 
 class MockContentServiceImpl: CountryService  {
     func getCountries(onCompletion: @escaping (Result<[Country], Error>) -> Void) {
-        onCompletion(.success([Country](repeating: Country(name: "Zambia", unicodeFlag: "🇿🇲", cities: ["Ndola", "Lusaka", "Livingstone", "Kitwe"]), count: 10)))
+        onCompletion(.success([Country](repeating: Country(name: "Zambia", unicodeFlag: "🇿🇲", cities: ["Ndola", "Lusaka", "Livingstone", "Kitwe"]), count: 2)))
     }
 }
