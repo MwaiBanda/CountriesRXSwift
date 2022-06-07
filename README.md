@@ -1,4 +1,4 @@
-# CountriesRXSwift
+# CountriesRX
 <b>UIKit</b>(`Clean Architect`) w/ <b>SwiftUI</b> Interpolation & Testing <br>
 - `Swinject` for Dependency Injection <br>
 - `RxSwift` & `RxTest` for Reactive Pattern in `UIKit`<br>
