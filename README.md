@@ -3,7 +3,7 @@
 - `Swinject` for Dependency Injection <br>
 - `RxSwift` & `RxTest` for Reactive Pattern in `UIKit`<br>
 - `Swift Algorithms` for addition Array methods(i.e `chunks` for custom dynamic grid) <br>
-- `SDWebImage`, `SDWebImageSwiftUI` & `SDWebImageSVGCode` for loading Web SVG images <br>
+- `SDWebImage`, `SDWebImageSwiftUI` & `SDWebImageSVGCoder` for loading Web SVG images <br>
 
 <table>
    <tr>
