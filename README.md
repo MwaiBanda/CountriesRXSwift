@@ -1,5 +1,5 @@
 # CountriesRXSwift
-<b>UIKit</b>(`Clean Architect`) w/ <b>SwiftUI</b> Interpolation <br>
+<b>UIKit</b>(`Clean Architect`) w/ <b>SwiftUI</b> Interpolation & Testing <br>
 - `Swinject` for Dependency Injection <br>
 - `RxSwift` & `RxTest` for Reactive Pattern in `UIKit`<br>
 - `Swift Algorithms` for addition Array methods(i.e `chunks` for custom dynamic grid) <br>
