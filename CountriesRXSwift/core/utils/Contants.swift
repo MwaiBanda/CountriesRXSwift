@@ -12,6 +12,7 @@ struct Constants {
     static let LoginViewModel = "loginViewModel"
     static let CountryService = "countryService"
     static let CountryViewModel = "countryViewModel"
+    static let CountryGridViewModel = "countryGridViewModel"
     static let PasswordNoNumber = "• Your Password Should Contain A Number"
     static let PasswordNotLong = "• Your Password Should Be Longer Than 6 Characters"
     static let PasswordNoSPCharacter = "• Your Password Should Contain A Special Character"

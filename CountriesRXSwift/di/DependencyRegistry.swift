@@ -44,5 +44,8 @@ class ViewModelAssembly: Assembly {
         container.register(CountryViewModelProvision.self, name: Constants.CountryViewModel) { resolver in
             CountryViewModel(service: resolver.resolve(CountryService.self, name: Constants.CountryService)!)
         }
+        container.register(CountryGridViewModel.self, name: Constants.CountryGridViewModel) { resolver in
+            CountryGridViewModel(service: resolver.resolve(CountryService.self, name: Constants.CountryService)!)
+        }
     }
 }

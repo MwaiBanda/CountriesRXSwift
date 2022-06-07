@@ -11,7 +11,7 @@ import Algorithms
 import SDWebImageSwiftUI
 
 struct CountryGridView: View {
-    @StateObject private var countryGridViewModel = CountryGridViewModel(service: Assembler.sharedInstance.resolver.resolve(CountryService.self, name: Constants.CountryService)!)
+    @StateObject private var countryGridViewModel = Assembler.sharedInstance.resolver.resolve(CountryGridViewModel.self, name: Constants.CountryGridViewModel)!
    
     
     var body: some View {
@@ -56,7 +56,9 @@ struct CountryGridView: View {
             .frame(width: screenBounds.width)
         }.navigationTitle("Countries")
         .onAppear {
+            DispatchQueue.main.async {
             countryGridViewModel.fetchCountries()
+            }
         }
     }
 }
