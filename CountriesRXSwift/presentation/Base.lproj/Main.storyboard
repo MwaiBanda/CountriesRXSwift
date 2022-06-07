@@ -115,23 +115,23 @@
             </objects>
             <point key="canvasLocation" x="851" y="-182"/>
         </scene>
-        <!--Settings-->
+        <!--Country Grid-->
         <scene sceneID="6wk-m3-Hmq">
             <objects>
-                <viewController id="Zsd-5z-JYn" customClass="SettingsViewController" customModule="CountriesRXSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zsd-5z-JYn" customClass="CountryGridViewController" customModule="CountriesRXSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3wQ-CZ-Jet">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="z0g-pr-UZT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape.2" catalog="system" id="ChF-0g-lyx"/>
+                    <tabBarItem key="tabBarItem" title="Country Grid" image="square.grid.2x2" catalog="system" id="ChF-0g-lyx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iT2-Sp-nar" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2723" y="129"/>
         </scene>
-        <!--Countries-->
+        <!--Country List-->
         <scene sceneID="orQ-SY-YpA">
             <objects>
                 <viewController id="tK3-Sl-1qO" customClass="CountriesListViewController" customModule="CountriesRXSwift" customModuleProvider="target" sceneMemberID="viewController">
@@ -141,7 +141,7 @@
                         <viewLayoutGuide key="safeArea" id="K4u-Zw-YN5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Countries" image="list.bullet.rectangle.portrait" catalog="system" id="vfm-CJ-spq"/>
+                    <tabBarItem key="tabBarItem" title="Country List" image="list.bullet.rectangle.portrait" catalog="system" id="vfm-CJ-spq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KA0-h2-j93" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -265,8 +265,8 @@
     </scenes>
     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="gearshape.2" catalog="system" width="128" height="100"/>
         <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
+        <image name="square.grid.2x2" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

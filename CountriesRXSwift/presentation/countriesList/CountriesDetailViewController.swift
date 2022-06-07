@@ -10,6 +10,7 @@ import Swinject
 import RxSwift
 import RxCocoa
 
+
 class CountriesDetailViewController: LBaseViewController {
     var country: Country?
     private var countryViewModel: CountryViewModelProvision!
@@ -51,6 +52,7 @@ class CountriesDetailViewController: LBaseViewController {
             }
         }
         self.tabBarController?.navigationItem.backBarButtonItem?.tintColor = .orange
+       
     }
     
 }

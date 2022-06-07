@@ -17,7 +17,8 @@ struct CountryResponse: Codable {
     }
 }
 
-struct Country: Codable {
+struct Country: Codable, Hashable {
+    var id: String = UUID().uuidString
     var name: String
     var unicodeFlag: String
     var flagURL: String?
@@ -30,3 +31,8 @@ struct Country: Codable {
         case flagURL = "flag"
     }
 }
+
+
+
+
+

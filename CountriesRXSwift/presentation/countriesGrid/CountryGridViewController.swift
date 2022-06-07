@@ -7,12 +7,13 @@
 
 import UIKit
 import SwiftUI
+import Swinject
 
-class SettingsViewController: LBaseViewController {
+class CountryGridViewController: LBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let childView = UIHostingController(rootView: SettingsView())
+        let childView = UIHostingController(rootView: CountryGridView())
         addChild(childView)
         childView.view.frame = view.frame
         view.addSubview(childView.view)
@@ -20,20 +21,9 @@ class SettingsViewController: LBaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tabBarController?.navigationItem.title = "Settings"
         self.tabBarController?.navigationItem.hidesBackButton = true
 
     }
-
 }
 
-struct SettingsView: View {
-    var body: some View {
-        ZStack {
-            Color(.systemGray5).ignoresSafeArea(.all)
-            VStack {
-                Text("We are in SwiftUI Now")
-            }
-        }
-    }
-}
+

@@ -12,7 +12,6 @@ import SDWebImage
 
 
 
-
 class CountriesListViewController: LBaseViewController {
     private var countryViewModel: CountryViewModelProvision!
     private var disposeBag: DisposeBag!
@@ -53,6 +52,7 @@ class CountriesListViewController: LBaseViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.barTintColor = .systemGray5
         countryViewModel.fetchCountries()
+      
     }
 
 }
